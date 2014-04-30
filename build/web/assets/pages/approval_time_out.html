@@ -1,0 +1,104 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>approval Time Out</title>
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+      <style type="text/css">
+        #container{bockground-color:blue;
+                   /*height:100%;*/
+        }
+        #header{
+            height:10%;
+        }
+        #cBody{
+            height:470px;
+        }
+        #hMenu{
+            height:3%;
+        }
+
+        #hImg{
+            height:6%;
+        }
+        #footer{
+            background-color: #339;
+            height:5%;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $("#hMenu").load("Home.html");
+        });
+    </script>
+
+</head>
+<body id="container">
+    <div id="header">
+        <div id="hImg">
+            <img src="../images/source_header.jpg" width="1300" height="70" /> 
+        </div>
+        <div id="hMenu">
+
+        </div>
+    </div>
+
+
+    <div id="cBody">
+        <div style="margin-left: 410px; margin-top: 70px;">
+            <table>
+                <tr>
+                    <td colspan="2" style="font-weight: bold; text-align: center;">
+                        Approval Time Out
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="font-weight: bold;">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form-row">Attribute Type :</td>
+                    <td>
+                        <select style="width: 150px;">
+                            <option value="NR">Normal</option>
+                            <option value="SF">Support Function</option>
+                        </select>
+                    </td>
+                    <td class="form-row"><input type="submit" value="Go" style="width: 80px;"/> </td>
+                </tr>
+                <tr >
+                    <td class="form-row"><label>Approval Time Out:</label></td><td> <input name="name" type="text" value="24:00" /></td>
+                    <td class="form-row"></td><td> </td>
+                </tr>
+                 <tr >
+                    <td class="form-row"><label>Email Interval:</label></td><td> <input name="name" type="text"  value="8:00"/></td>
+                    <td class="form-row"></td><td> </td>
+                </tr>
+                
+                <tr>
+                    <td class="form-row" colspan="1" style="text-align: right;"> <input type="submit" value="Update" style="width: 100px;"/> &nbsp;&nbsp;&nbsp;</td>
+                    <td class="form-row" colspan="1">&nbsp;&nbsp;&nbsp; <input type="reset" value="Clear" style="width: 100px;" /></td>
+                </tr>
+            </table>
+        </div>
+        <div style="color: blueviolet;margin-left: 340px;margin-top: 50px;">
+            <p>
+                <b>Note:- </b>
+
+            </p>
+            <p>
+                1:'In above Text Boxes ,given the example of time interval and mail interval should be like that formate<br>
+
+            </p>
+        </div>

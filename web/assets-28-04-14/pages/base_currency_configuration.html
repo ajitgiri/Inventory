@@ -1,0 +1,147 @@
+<html>
+    <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+    <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="../js/jscript.js"></script>
+    <script type="text/javascript" src="../js/EventScript.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/validation.js"></script>
+    <style type="text/css">
+        #container{bockground-color:blue;
+                   /*height:100%;*/
+        }
+        #header{
+            height:10%;
+        }
+        #cBody{
+            height:470px;
+        }
+        #hMenu{
+            height:3%;
+        }
+
+        #hImg{
+            height:6%;
+        }
+        #footer{
+            background-color: #339;
+            height:5%;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $("#hMenu").load("Home.html");
+           
+        });
+    </script>
+    <script type="text/javascript">
+        $(function() {
+             $("#geoReportTableDiv").hide();
+             $("#go_id2").click(function(){
+                 $("#geoReportTableDiv").show();
+             });
+        });
+    </script>
+</head>
+<body id="container">
+    <div id="header">
+        <div id="hImg">
+            <img src="../images/source_header.jpg" width="1300" height="70" /> 
+        </div>
+        <div id="hMenu">
+
+        </div>
+    </div>
+
+
+    <div id="cBody"> 
+        <div style="margin-left: 380px; margin-top: 80px;">
+            <table>
+               
+                <tr>
+                    <td colspan="4" style="font-weight: bold;">
+                        Base Currency Configuration
+                    </td>
+                </tr>
+                 <tr>
+                    <td colspan="4" style="height: 20;">
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Legal Entity</td>
+                    <td>Currency Name </td>
+                    <td>Currency Symbol</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="select" style="width:152px">
+                            <option selected="selected">Legal Entity 1</option>
+                            <option>Legal Entity 2</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select>
+                            <option value="" disabled="disabled" selected="selected">Please select a Currency</option>
+                            <option value="1">INR</option>
+                            <option value="2">DOLLAR</option>
+                            <option value="2">EURO</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="input-append">
+                            <input type="text" class="input-medium search-query" name="s" placeholder="Search" value="">
+                        </div>
+                    </td>
+                    <td>
+                        <input type="submit" value="ADD" id="go_id2"/></td>
+                </tr>
+            </table>
+            <div  id="geoReportTableDiv" style="margin-top: 20px;">
+                    <table>
+                        <tr>
+                            <td>Legal Entity Name<hr></td>
+                            <td>Currency Name<hr></td>
+                            <td>Currency Symbol<hr></td>
+                            <td>Select All <input type="checkbox" name="checkbox4" value="checkbox" id="selectall"><hr> </td>
+                        </tr>
+                        <tr>
+                            <td>Legal Entity 1</td>
+                            <td>INR</td>
+                            <td>?</td>
+                            <td><input type="checkbox" ></td>
+                        </tr>
+                         <tr>
+                            <td>Legal Entity 2</td>
+                            <td>DOLLAR</td>
+                            <td>$</td>
+                            <td><input type="checkbox" ></td>
+                        </tr>
+                         <tr>
+                            <td>Legal Entity 3</td>
+                            <td>EURO</td>
+                            <td>€</td>
+                            <td><input type="checkbox" ></td>
+                        </tr>
+                    </table>
+                     <table border="0">
+                    <tr>
+                        <td colspan="9" style="height: 20px;"></td>
+                    </tr>
+                    <tr>
+                        <td  align="right"><input name="submit" type="submit" style="width: 100px;"  value="Back"/></td>
+                        <td  align="left"><input name="reset" type="reset" style="width: 100px;" value="Cancel"/></td>
+                        <td width="100" align="left"><input name="reset" type="reset" style="width: 100px;" value="Update"/></td>
+                        <td width="100" align="right"><input name="submit" type="submit" style="width: 100px;"  value="Delete"/></td>
+                        <td width="84" align="right">&nbsp;</td>
+                    </tr>
+                </table>
+                </div>
+
+        </div>
+        </div>
+</body>
+</html>

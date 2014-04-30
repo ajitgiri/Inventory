@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Vendor Configuration</title>
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+     <style type="text/css">
+            #container{bockground-color:blue;
+                       /*height:100%;*/
+            }
+            #header{
+                height:10%;
+            }
+            #cBody{
+                height:470px;
+            }
+            #hMenu{
+                height:3%;
+            }
+
+            #hImg{
+                height:6%;
+            }
+            #footer{
+                background-color: #339;
+                height:5%;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function() {
+                $("#hMenu").load("Home.html");
+                $("#tableCheckBox").hide();
+                $("#tableDropDown").hide();
+                
+                $("#sel").change(function(){
+                  //  alert("Not-same");
+                    var value1=$("#sel").val();
+                    var vl1="DropDown";
+                    var vl2="CheckBox";
+                    if(value1==vl1){
+                        $("#tableCheckBox").hide();
+                       $("#tableDropDown").show(); 
+                    }
+                if(value1==vl2){
+                        $("#tableDropDown").hide();
+                        $("#tableCheckBox").show(); 
+                    }
+                });
+            });
+        </script>
+        
+    </head>
+    <body id="container">
+        <div id="header">
+            <div id="hImg">
+                <img src="../images/source_header.jpg" width="1300" height="70" /> 
+            </div>
+            <div id="hMenu">
+
+            </div>
+        </div>
+
+
+        <div id="cBody"> 
+        <div style="margin-left: 240px; margin-top: 80px;float: left">
+            <table  border="0" cellspacing="3" cellpadding="1">
+                <tr>
+                    <td colspan="4" style="font-weight: bold; text-align: center;">
+                        Vendor Configuration
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="font-weight: bold; height: 20px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="102"><div align="center">Attribute Type </div></td>
+                    <td width="144"><div align="center">Attribute Name </div></td>
+                    <td width="145"><div align="center">Attribute Value </div></td>
+                    <td width="79"><div align="center">Mandatory</div></td>
+                </tr>
+                <tr>
+                    <td><label>
+                            <select name="select" id="sel">
+                                <option selected="selected">Upload</option>
+                                <option>Date</option>
+                                <option value="">Alphanumeric</option>
+                                <option value="DropDown">DropDown Single</option>
+                                <option value="CheckBox">CheckBox Multiple</option>
+                            </select>
+                        </label></td>
+                    <td><label>
+                            <input type="text" name="textfield" />
+                        </label></td>
+                    <td><label>
+                            <input type="text" name="textfield2" />
+                        </label></td>
+                    <td><select name="select2"  style="width: 100px !important; min-width: 100px; max-width: 100px;">
+                            <option selected="selected" value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select></td>
+                    <td>
+                        <input type="submit" value="ADD"/>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+            <div style="float: right;margin-top: 120px;margin-right: 50px;">
+                <table border="0" id="tableCheckBox">
+                    <tr >
+                        <td rowspan="3">
+                            <textarea style="width: 120px;">
+checkBox1 checkBox2 checkBox3
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Remove"/> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Deselect "/> </td>
+                    </tr>
+                     <tr>
+                         <td align="right"><input type="submit" value="ADD" size="100px;"/> </td>
+                    </tr>
+                </table>
+                 <table border="0" id="tableDropDown">
+                    <tr >
+                        <td rowspan="3">
+                            <textarea style="width: 139px;">
+DropDownSelect1DropDownSelect2DropDownSelect3
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Remove"/> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Deselect "/> </td>
+                    </tr>
+                     <tr>
+                         <td align="right"><input type="submit" value="ADD" size="100px;"/> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br><br><br><br>Note: Dropdown and checkbox system will have multiple values.
+                        </body>
+                        </html>

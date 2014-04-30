@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <style type="text/css">
+            #container{bockground-color:blue;
+                       /*height:100%;*/
+            }
+            #header{
+                height:10%;
+            }
+            #cBody{
+                height:470px;
+            }
+            #hMenu{
+                height:3%;
+            }
+
+            #hImg{
+                height:6%;
+            }
+            #footer{
+                background-color: #339;
+                height:5%;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function() {
+                $("#hMenu").load("Home.html");
+                
+            });
+        </script>
+<script>
+	$(document).ready(function() {
+    $('#selectall').click(function(event) {  //on click 
+        if(this.checked) { // check select status
+            $('.checkbox1').each(function() { //loop through each checkbox
+                this.checked = true;  //select all checkboxes with class "checkbox1"               
+            });
+        }else{
+            $('.checkbox1').each(function() { //loop through each checkbox
+                this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+            });         
+        }
+    });
+    
+});
+</script>
+    </head>
+    <body id="container">
+        <div id="header">
+            <div id="hImg">
+                <img src="../images/source_header.jpg" width="1300" height="70" /> 
+            </div>
+            <div id="hMenu">
+
+            </div>
+        </div>
+
+
+        <div id="cBody">
+            <div   style="margin-left: 380px; margin-top: 80px;">
+                <form>
+                    <table width="332" border="0"  cellpadding="0" cellspacing="2">
+                        <tr>
+                            <td colspan="3" style="font-weight: bold;">
+                            <div align="center">Decimal Places Configuration</div></td>
+                        </tr>
+                        <tr >
+                            <td style="height: 20px;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="0">Select Legal Entity</td>
+                            <td width="130"><label>Decimal Places</label></td>
+                            <td width="38">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td width="5">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td width="139"><select name="select" style="width:130px">
+                              <option selected="selected">Select</option>
+                              <option>Legal Entity 1</option>
+                              <option>Legal Entity 2</option>
+                            </select></td>
+                            <td>
+                                    <div align="left">
+                                      <input type="text" name="textfield42" style="width:130px"/>
+                                    </div></td>
+                            <td><input name="button" type="button" id="sub" value="Add"/></td>
+                          <td width="8">&nbsp;</td>
+                        </tr>
+                    </table>
+                </form>
+              <div id="tableArea">
+                    <table width="430">
+                        <tr>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td width="20">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td width="131" style="background-color: activecaption;">Legal Entity Name</td>
+                            <td width="130" style="background-color: activecaption;">Decimal Places </td>
+                            <td width="129" style="background-color: activecaption;"><input type="checkbox" name="checkbox4" value="checkbox" id="selectall"/>
+                          Select All </td>
+                        </tr>
+                        <tr>
+                            <td>Legal Entity 1 </td>
+                            <td><input name="textfield422" type="text" style="width:130px" value="2"/></td>
+                            <td><input type="checkbox" class="checkbox1"/> </td>
+                        </tr>
+                        <tr>
+                            <td>Legal Entity 2</td>
+                            <td><input name="textfield423" type="text" style="width:130px" value="3"/></td>
+                            <td><input type="checkbox" class="checkbox1"/> </td>
+                        </tr>
+                        <tr>
+                            <td>Legal Entity 3 : </td>
+                            <td><input name="textfield424" type="text" style="width:130px" value="4"/></td>
+                            <td><input type="checkbox" class="checkbox1"/> </td>
+                        </tr>
+                </table>
+                    
+                <p>&nbsp;</p>
+              </div>
+            </div>
+                <div align="center">
+                  <table width="572" border="0" class="classtd1">
+                      <tr>
+                        <td colspan="9" style="height: 20px;"></td>
+                      </tr>
+                      <tr>
+                        <td width="101"><input name="submit" type="submit" style="width: 100px;"  value="Back"/></td>
+                        <td width="100"><input name="reset" type="reset" style="width: 100px;" value="Update"/></td>
+                        <td width="100" align="right"><input name="reset2" type="reset" style="width: 100px;" value="Delete"/></td>
+                        <td width="100"><input name="reset3" type="reset" style="width: 100px;" value="Cancel"/></td>
+                        <td width="1" align="right">&nbsp;</td>
+                        <td width="1" align="left">&nbsp;</td>
+                        <td width="139" align="right">&nbsp;</td>
+                      </tr>
+                  </table>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>Notes: Can select decimal point 1/2/3/0. On selecting 0, Radio button will appear with 3 options as Round Off to Nearest Value, Ceiling and Flooring. </p>
+    </div>
+           
+    </body>
+</html>

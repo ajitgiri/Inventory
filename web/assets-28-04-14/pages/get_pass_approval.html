@@ -1,0 +1,184 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get Pass Approval </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <style type="text/css">
+            #container{bockground-color:blue;
+                       /*height:100%;*/
+            }
+            #header{
+                height:10%;
+            }
+            #cBody{
+                height:470px;
+            }
+            #hMenu{
+                height:3%;
+            }
+
+            #hImg{
+                height:6%;
+            }
+            #footer{
+                background-color: #339;
+                height:5%;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function() {
+                $("#hMenu").load("Home.html");
+            });
+        </script>
+
+    </head>
+    <body id="container">
+        <div id="header">
+            <div id="hImg">
+                <img src="../images/source_header.jpg" width="1300" height="70" /> 
+            </div>
+            <div id="hMenu">
+
+            </div>
+        </div>
+
+
+        <div id="cBody">
+            <div style="margin-left: 50px; margin-top: 70px;">
+                <div style="margin-left: 340px; margin-top: 50px;">
+                    <table border="0">
+                        <tr>
+                            <td colspan="4" style="font-weight: bold;" align="center">
+                                Gate Pass Approval List
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="height: 20px;"></td>
+                        </tr>
+                        <tr>
+                            <td>Select Legal Entity: </td>
+                            <td>
+                                <select style="width: 150px;">
+                                    <option value="0" selected="selected">---Select---</option>
+                                    <option value="IND">Legal Entity1</option>
+                                    <option value="USA">Legal Entity2</option>
+                                    <option value="UK">Legal Entity3</option>
+                                    <option value="AUS">Legal Entity4</option>
+                                </select>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Select State: </td>
+                            <td>
+                                <select style="width: 150px;">
+                                    <option value="0" selected="selected">---Select---</option>
+                                    <option value="IND">State Name1</option>
+                                    <option value="USA">State Name2</option>
+                                    <option value="UK">State Name3</option>
+                                    <option value="AUS">State Name4</option>
+                                </select>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Select City: </td>
+                            <td>
+                                <select style="width: 150px;">
+                                    <option value="0" selected="selected">---Select---</option>
+                                    <option value="IND">City Name1</option>
+                                    <option value="USA">City Name2</option>
+                                    <option value="UK">City Name3</option>
+                                    <option value="AUS">City Name4</option>
+                                </select>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Select Site: </td>
+                            <td>
+                                <select style="width: 150px;">
+                                    <option value="0" selected="selected">---Select---</option>
+                                    <option value="IND">Site Name1</option>
+                                    <option value="USA">Site Name2</option>
+                                    <option value="UK">Site Name3</option>
+                                    <option value="AUS">Site Name4</option>
+                                </select>
+                            </td>
+                            <td><input type="submit" value="Go"/></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="margin-left: 150px; margin-top: 30px;">
+                    <table border="0">
+                        <tr>
+
+                            <td style="width: 200px;" colspan="2" >
+                                <input type="text" value=" Search by Emp ID "  style="font-family:Helvetica, sans-serif;color: #D6D6D0;font-size: 10px;width: 90px; " />
+                                <input type="text" value=" Search by Emp Name " style="font-family:Helvetica, sans-serif;color: #D6D6D0;font-size: 10px; width: 110px;" />
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td  colspan="2" rowspan="2">
+                                <textarea rows="8" cols="25">
+EMP-101(Ajit Giri)
+EMP-102(Abhisek Paul)
+EMP-103(Satyabrata Pradhan)
+                                </textarea>
+                            </td>
+                            <td><input type="submit" value="ADD" style="width: 100px;"/> </td>
+                            <td> <input type="text" value="EMP-101(Ajit Giri)" size="25"/> </td>
+                            <td> <input type="file"/><input type="submit" value="Upload"/> </td>
+                        </tr>
+                        <tr>
+
+                            <td><input type="submit" value="ADD" style="width: 100px;"/> </td>
+                            <td> <input type="text" value="EMP-103(Satyabrata Pradhan)" size="25"/> </td>
+                            <td> <input type="file"/><input type="submit" value="Upload"/> </td>
+                        </tr>
+                        <tr>
+                            <td style="float: right; height: 20px;" colspan="5" ></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td style="float: left;" ><input type="submit" value="Update" style="width: 100px;"/></td>
+                        </tr>
+                    </table>
+                    <br/>
+                   
+                </div>
+            </div>
+            <div style="color: blueviolet;margin-left: 340px;margin-top: 50px;">
+                <p>
+                    <b>Note:- </b>
+
+                </p>
+                <p>
+                    1:'Enterprise Setup'<br>
+                    2:'Enterprise Setup'
+
+                </p>
+            </div>
+    </body>

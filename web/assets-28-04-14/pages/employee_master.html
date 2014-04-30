@@ -1,0 +1,352 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Master</title>
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <style type="text/css">
+            #container{bockground-color:blue;
+                       /*height:100%;*/
+            }
+            #header{
+                height:10%;
+            }
+            #cBody{
+                height:470px;
+            }
+            #hMenu{
+                height:3%;
+            }
+
+            #hImg{
+                height:6%;
+            }
+            #footer{
+                background-color: #339;
+                height:5%;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function() {
+                $("#hMenu").load("Home.html");
+                $("#tableForExistion").hide();
+                $("#tableForNew").hide();
+
+                $("#sel").change(function() {
+                    //  alert("Not-same");
+                    var value1 = $("#sel").val();
+                    var vl1 = "new";
+                    var vl2 = "employee1";
+                    if (value1 == vl1) {
+                        $("#tableForExistion").hide();
+                        $("#tableForNew").show();
+                    }
+                    if (value1 == vl2) {
+                        $("#tableForNew").hide();
+                        $("#tableForExistion").show();
+                    }
+                });
+                $("#workStatus").change(function() {
+                    var workingStatus = $("#workStatus").val();
+                    //  var workStatusDate=$("#workStatusDate").val();
+                    var status = "working";
+                    if (workingStatus == status) {
+                        // alert("status--if--" + workingStatus)
+                        $(".workStatusDate").hide();
+                    } else {
+                        // alert("status--else--" + workingStatus)
+                        $(".workStatusDate").show();
+                    }
+                });
+            });
+        </script>
+
+    </head>
+    <body id="container">
+        <div id="header">
+            <div id="hImg">
+                <img src="../images/source_header.jpg" width="1300" height="70" /> 
+            </div>
+            <div id="hMenu">
+
+            </div>
+        </div>
+
+        <div id="cBody">
+            <div style="margin-left: 0px; margin-top: 80px;">
+                <div style="margin-left: 290px; margin-top: 50px;">
+                    <table border="0">
+                        <tr>
+                            <td colspan="6" style="font-weight: bold;text-align: center;">
+                                Employee Master
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="height: 20px;">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Select Legal Entity :</td>
+                            <td>
+                                <select style="width: 150px;">
+                                    <option value="0" selected="selected">---Select---</option>
+                                    <option value="IND">Legal Entity1</option>
+                                    <option value="USA">Legal Entity2</option>
+                                    <option value="UK">Legal Entity3</option>
+                                    <option value="AUS">Legal Entity4</option>
+                                </select>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Select Employee :</td>
+                            <td>
+                                <select style="width: 150px;" id="sel">
+                                    <option value="select" selected="selected" >---Select---</option>
+                                    <option value="new">New</option>
+                                    <option value="employee1">001-Ajit Kumar</option>
+                                    <option value="UK">002-Abhishek</option>
+                                    <option value="AUS">003-Debasish</option>
+                                </select>
+                            </td>
+                            <td><input type="text" value=" Search By ID " style="font-family:Helvetica, sans-serif;color: #D6D6D0;font-size: 10px;width: 90px;"  /> </td>
+                            <td><input type="text" value=" Search By Name " style="font-family:Helvetica, sans-serif;color: #D6D6D0;font-size: 10px;width: 100px;"/> </td>
+                            <td><input type="submit" value="Next" style="width: 50px;"/></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table id="tableForNew">
+                        <tr>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+
+                        </tr>
+                        <tr>
+                            <td width="170px">Employee ID :</td>
+                            <td><input type="text" name="ss"/> </td>
+                            <td width="170px">Employee Name :</td>
+                            <td><input type="text" name="ss"/> </td>
+                            <td> </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Official Mail Id :</td>
+                            <td><input type="text" name="ss"/> </td>
+                            <td>Organization Level 1 :</td>
+                            <td><select name="select" style="width:150px">
+                                    <option selected="selected">---Select---</option>
+                                    <option>BU Name1</option>
+                                    <option>BU Name2</option>
+                                    <option>BU Name3</option>
+                                </select></td>
+                            <td> </td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Organization Level 2 :</td>
+                            <td><select name="select" style="width:150px">
+                                    <option selected="selected">---Select---</option>
+                                    <option>SBU Name1</option>
+                                    <option>SBU Name2</option>
+                                    <option>SBU Name3</option>
+                                </select></td>
+                            <td>Organization Level 3 :</td>
+                            <td><select name="select" style="width:150px">
+                                    <option selected="selected">---Select---</option>
+                                    <option>CC Name1</option>
+                                    <option>CC Name2</option>
+                                    <option>CC Name3</option>
+                                </select></td>
+                            <td> </td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Support Function :</td>
+                            <td><select name="select" style="width:150px">
+                                    <option selected="selected">---Select---</option>
+                                    <option>IT Hardware</option>
+                                    <option>IT Software</option>
+                                    <option>NON IT</option>
+                                    <option>LAB/Engineering</option>
+                                </select></td>
+                            <td>Support Function Head :</td>
+                            <td><select name="select" style="width:150px">
+                                    <option selected="selected">---Select---</option>
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select></td>
+                            <td> </td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Reporting Manager :</td>
+                            <td><select name="select" style="width:150px">
+                                    <option selected="selected">---Select---</option>
+                                    <option>001-Manager1</option>
+                                    <option>002-Manager2</option>
+                                    <option>003-Manager3</option>
+                                    <option>004-Manager4</option>
+                                </select></td>
+                            <td>Working Status :</td>
+                            <td>
+                                <select name="select" style="width:150px" id="workStatus">
+                                    <option value="select">Select</option>
+                                    <option value="working">Working</option>
+                                    <option value="resigned">Resigned</option>
+                                </select>
+                            </td>
+                            <td style="color: blue" class="workStatusDate">Date: </td>
+                            <td class="workStatusDate"><input type="text" value="--/--/----" /> </td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"> </td>
+                        </tr>
+                         <tr>
+                            <td width="100" align="right"><input name="submit" type="submit" style="width: 100px;"  value="Back"/></td>
+                            <td width="100" align="left"><input name="reset" type="reset" style="width: 100px;" value="Cancel"/></td>
+                            <td width="100" align="left"><input name="reset" type="reset" style="width: 100px;" value="Update"/></td>
+                            <td width="100" align="right"><input name="reset2" type="reset" style="width: 100px;" value="Delete"/></td>
+                        </tr>
+                    </table>
+
+                    <table id="tableForExistion">
+                        <tr>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+
+                        </tr>
+                        <tr>
+                            <td width="170px">Employee ID :</td>
+                            <td><input type="text" name="ss" value="emp-001(ajit)"/> </td>
+                            <td width="170px">Employee Name :</td>
+                            <td><input type="text" name="ss" value="Ajit Kumar"/> </td>
+                            <td> </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Official Mail Id :</td>
+                            <td><input type="text" name="ss" value="ajit.g@strikedart.com"/> </td>
+                            <td>Organization Level 1 :</td>
+                            <td><select name="select" style="width:150px">
+                                    <option >---Select---</option>
+                                    <option>BU Name1</option>
+                                    <option selected="selected">BU Name2</option>
+                                    <option>BU Name3</option>
+                                </select></td>
+                            <td> </td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Organization Level 2 :</td>
+                            <td><select name="select" style="width:150px">
+                                    <option >---Select---</option>
+                                    <option>SBU Name1</option>
+                                    <option>SBU Name2</option>
+                                    <option selected="selected">SBU Name3</option>
+                                </select></td>
+                            <td>Organization Level 3 :</td>
+                            <td><select name="select" style="width:150px">
+                                    <option >---Select---</option>
+                                    <option>CC Name1</option>
+                                    <option selected="selected">CC Name2</option>
+                                    <option>CC Name3</option>
+                                </select></td>
+                            <td> </td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Support Function :</td>
+                            <td><select name="select" style="width:150px">
+                                    <option >---Select---</option>
+                                    <option>IT Hardware</option>
+                                    <option selected="selected">IT Software</option>
+                                    <option>NON IT</option>
+                                    <option>LAB/Engineering</option>
+                                </select></td>
+                            <td>Support Function Head :</td>
+                            <td><select name="select" style="width:150px">
+                                    <option >---Select---</option>
+                                    <option selected="selected">Yes</option>
+                                    <option>No</option>
+                                </select></td>
+                            <td> </td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Reporting Manager :</td>
+                            <td><select name="select" style="width:150px">
+                                    <option >---Select---</option>
+                                    <option>001-Manager1</option>
+                                    <option>002-Manager2</option>
+                                    <option selected="selected">003-Manager3</option>
+                                    <option>004-Manager4</option>
+                                </select></td>
+                            <td>Working Status :</td>
+                            <td>
+                                <select name="select" style="width:150px" id="workStatus">
+                                    <option value="select">Select</option>
+                                    <option value="working">Working</option>
+                                    <option value="resigned">Resigned</option>
+                                </select>
+                            </td>
+                            <td class="workStatusDate" style="color: blue">Date: </td>
+                            <td class="workStatusDate"><input type="text" value="--/--/----" /> </td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"> </td>
+                        </tr>
+                         <tr>
+                            <td width="100" align="right"><input name="submit" type="submit" style="width: 100px;"  value="Back"/></td>
+                            <td width="100" align="left"><input name="reset" type="reset" style="width: 100px;" value="Cancel"/></td>
+                            <td width="100" align="left"><input name="reset" type="reset" style="width: 100px;" value="Update"/></td>
+                            <td width="100" align="right"><input name="reset2" type="reset" style="width: 100px;" value="Delete"/></td>
+                        </tr>
+                    </table>
+                  
+                       
+                </div>
+                <div style="margin-left: 0px; margin-top: 10px;">
+
+
+                </div>
+            </div>
+            <div style="color: blueviolet;margin-left: 340px;margin-top: 50px;">
+                <p>
+                    <b>Note:- </b>
+
+                </p>
+                <p>
+                    1:'If working Status is working then no need to enter Date'<br>
+                    2:'If working Status is resigned then Date : will come after Working Status:.
+
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

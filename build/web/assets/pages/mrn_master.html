@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>EnterPrise Mentor Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <style type="text/css">
+            #container{bockground-color:blue;
+                       /*height:100%;*/
+            }
+            #header{
+                height:10%;
+            }
+            #cBody{
+                height:470px;
+            }
+            #hMenu{
+                height:3%;
+            }
+
+            #hImg{
+                height:6%;
+            }
+            #footer{
+                background-color: #339;
+                height:5%;
+            }</style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#div_id1').hide();
+                $('#div_id2').hide();
+
+            });
+        </script>
+
+
+        <script type="text/javascript">
+            $(function() {
+                $("#hMenu").load("Home.html");
+            });
+        </script>
+        
+
+    </head>
+    <body id="container">
+        <div id="header">
+            <div id="hImg">
+                <img src="../images/source_header.jpg" width="1300" height="70" /> 
+            </div>
+            <div id="hMenu">
+
+            </div>
+        </div>
+
+
+        <div id="cBody">
+            <div   style="margin-left: 340px; margin-top: 50px;">
+
+            <table>
+                <tr>
+                    <td colspan="2" style="font-weight: bold;">
+                        MRN Detail
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="font-weight: bold;">
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="form-row"><label>Invoice No.  &nbsp;:</label></td><td> <input name="name" type="text"  /></td>
+                    <td class="form-row"><label>&nbsp;&nbsp;Invoice Date :</label></td><td><input type="text" name="textfield3" style="width:100px" id="datepicker1" size="10"/></td>
+                </tr>
+
+                <tr>
+                    <td class="form-row"><label>Delivery Note  &nbsp;:</label></td><td> <input name="name" type="text"  /></td>
+                    <td class="form-row"><label>&nbsp;&nbsp;Delivery Date :</label></td><td><input type="text" name="textfield3" style="width:100px" id="datepicker2" size="10"/></td>
+                </tr>
+                <tr>
+                    <td class="form-row"><label>City :</label></td>
+
+                    <td>
+                        <select style="width: 150px;">
+                            <option value="0" selected="selected">---Select---</option>
+                            <option value="N1">City Name1</option>
+                            <option value="V1">City Name2</option>
+                            <option value="V2">City Name3</option>
+                        </select>
+
+                    </td>
+                    <td class="form-row"><label>&nbsp;Site :</label></td>
+                    <td>
+                        <select style="width: 150px;">
+                            <option value="0" selected="selected">---Select---</option>
+                            <option value="N1">site1</option>
+                            <option value="V1">site2</option>
+                            <option value="V2">site3</option>
+                        </select>
+                    </td>
+                </tr>  
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+				<tr>
+                            <td colspan="2" style="font-weight: bold;">
+                                PO Line Item 
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td>Purchase Type</td>
+                    <td>Purchase Quantity</td>
+                    <td>Receive Item</td>
+                </tr>
+                <tr>
+                    <td><input name="name" type="text" value="Item-001"></td>
+                    <td><input name="name" type="text" value="10"></td>
+                    <td><input name="name" type="text" value="5"></td>
+                </tr>
+				<tr>
+                    <td><input name="name" type="text" value="Item-002"></td>
+                    <td><input name="name" type="text" value="20"></td>
+                    <td><input name="name" type="text" value="4"></td>
+                </tr>
+				<tr>
+                    <td><input name="name" type="text" value="Item-003"></td>
+                    <td><input name="name" type="text" value="30"></td>
+                    <td><input name="name" type="text" value="7"></td>
+                </tr>
+                <td>&nbsp;</td>
+                <tr>
+                    <td>
+                       
+
+                            <td class="form-row" colspan="2" style="text-align: right;"> <input type="submit" value="Update" style="width: 100px;"/>
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div style="margin-left: 340px;margin-top: 50px;">
+            <p>
+                <b>Note:- </b>
+
+            </p>
+            <p>
+                1:'Enterprise Setup' <br>
+                2:'Enterprise Setup' 
+
+            </p>
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,177 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Asset SetUp Hierarchy</title>
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <style type="text/css">
+            #container{bockground-color:blue;
+                       /*height:100%;*/
+            }
+            #header{
+                height:10%;
+            }
+            #cBody{
+                height:470px;
+            }
+            #hMenu{
+                height:3%;
+            }
+
+            #hImg{
+                height:6%;
+            }
+            #footer{
+                background-color: #339;
+                height:5%;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function() {
+                $("#hMenu").load("Home.html");
+                $("#checBoxkSub").click(function(){
+                    $("#checBoxkMinor").attr('checked',true);
+                });
+            });
+        </script>
+    </head>
+    <body id="container">
+        <div id="header">
+            <div id="hImg">
+                <img src="../images/source_header.jpg" width="1300" height="70" /> 
+            </div>
+            <div id="hMenu">
+
+            </div>
+        </div>
+
+        <div id="cBody"> 
+            <div style="margin-left: 200px; margin-top: 50px;">
+              <table border="0" >
+                <tr>
+                  <td colspan="6" style="font-weight: bold;text-align: center;height: 20px;">Asset Hierarchy</td>
+                </tr>
+                <tr>
+                  <td colspan="6" style="font-weight: bold;height: 20px;"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" style="font-weight: bold;"><div align="right">Asset Classification </div></td>
+                  <td colspan="2" >Display Classification Name</td>
+                </tr>
+                <tr>
+                  <td   width="159"></td>
+                  <td  align="left">IT Hardware :&nbsp;&nbsp;&nbsp; 
+                    <input type="checkbox" name="sample" value="select"></td>
+                  <td><input type="text" name="sample2" ></td>
+                  <td  align="center"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td  ></td>
+                  <td  align="left">IT Software:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <input type="checkbox" name="sample2" value="select"></td>
+                  <td><input type="text" name="sample2" ></td>
+                  <td  align="center"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td  ></td>
+                  <td  align="left">Non IT :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <input type="checkbox" name="sample2" value="select"></td>
+                  <td><input type="text" name="sample2" ></td>
+                  <td  align="center"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td ></td>
+                  <td  align="left">Lab/Engineering:
+                      <input type="checkbox" name="sample2" value="select"></td>
+                  <td><input type="text" name="sample2" ></td>
+                  <td  align="center"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td  ></td>
+                  <td  align="left" width="135" style="font-weight: bold;">Mapping of Classification level </td>
+                  <td  align="left" width="156" style="font-weight: bold;">Depreciation at level</td>
+                  <td  align="left" width="133" style="font-weight: bold;">Asset Tag at level</td>
+                  <td  align="left" width="145" style="font-weight: bold;">Support Function at level</td>
+                  <td  align="left" width="138" style="font-weight: bold;">Shared Asset at level</td>
+                </tr>
+                <tr>
+                  <td  >Asset Major Category  :
+                      <input type="checkbox" name="sample2" value="select" checked disabled></td>
+                  <td  align="center"><input type="radio" name="MappingOfC" value="select"></td>
+                  <td  align="center"><input type="radio" name="DeprecAtl" value="select"></td>
+                  <td  align="center"><input type="radio" name="AssetTAtl" value="select"></td>
+                  <td  align="center"><input type="radio" name="SupportFAtl" value="select"></td>
+                  <td  align="center"><input type="radio" name="SharedAAtl" value="select"></td>
+                </tr>
+                <tr>
+                  <td>Asset Minor Category :&nbsp;
+                      <input type="checkbox" name="sample2" id="checBoxkMinor"></td>
+                  <td  align="center"><input type="radio" name="MappingOfC" value="select"></td>
+                  <td  align="center"><input type="radio" name="DeprecAtl" value="select"></td>
+                  <td  align="center"><input type="radio" name="AssetTAtl" value="select"></td>
+                  <td  align="center"><input type="radio" name="SupportFAtl" value="select"></td>
+                  <td  align="center"><input type="radio" name="SharedAAtl" value="select"></td>
+                </tr>
+                <tr>
+                  <td>Asset Sub Category&nbsp;&nbsp;&nbsp; :
+                    <input type="checkbox" name="sample2" id="checBoxkSub"></td>
+                  <td  align="center"><input type="radio" name="MappingOfC" value="select"></td>
+                  <td  align="center"><input type="radio" name="DeprecAtl" value="select"></td>
+                  <td  align="center"><input type="radio" name="AssetTAtl" value="select"></td>
+                  <td  align="center"><input type="radio" name="SupportFAtl" value="select"></td>
+                  <td  align="center"><input type="radio" name="SharedAAtl" value="select"></td>
+                </tr>
+                <tr>
+                  <td height="57" colspan="5" >Any Unique Asset Id existing :      
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                  <input type="radio" name="sample" value="select">
+                    Yes
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                  <input type="radio" name="sample" value="select">
+                    No</td>
+                </tr>
+                <tr>
+                
+              </table>
+			  <table border="0" class="classtd1">
+                        <tr>
+                            <td colspan="9" style="height: 20px;"></td>
+                        </tr>
+                        <tr>
+                            <td width="184"></td>
+                            <td width="86"></td>
+                            <td width="143" align="right">&nbsp;</td>
+                            <td width="77" align="left"><input name="submit" type="submit" style="width: 100px;"  value="Back"/></td>
+                            <td width="100" align="left"><input type="reset" value="Update" style="width: 100px;"/></td>
+                            <td width="100" align="right"><input type="submit"  value="Delete" style="width: 100px;"/></td>
+                            <td width="100" align="right"><input name="reset" type="reset" style="width: 100px;" value="Cancel"/></td>
+                        </tr>
+                    </table>
+              <br>
+              <br><br>
+                <div style="color: blueviolet;">
+                    This Above table and no of rows will generate According<br>
+                    to the No Of Levels :: will entered by User.
+
+                    Any Unique Asset id Y/ N
+                </div>
+          </div>
+        </div>
+    </body>
+</html>

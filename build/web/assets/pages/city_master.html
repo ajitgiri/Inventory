@@ -1,0 +1,163 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>City Master</title>
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <style type="text/css">
+            #container{bockground-color:blue;
+                       /*height:100%;*/
+            }
+            #header{
+                height:10%;
+            }
+            #cBody{
+                height:470px;
+            }
+            #hMenu{
+                height:3%;
+            }
+
+            #hImg{
+                height:6%;
+            }
+            #footer{
+                background-color: #339;
+                height:5%;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function() {
+                $("#hMenu").load("Home.html");
+            });
+        </script>
+    </head>
+    <body id="container">
+        <div id="header">
+            <div id="hImg">
+                <img src="../images/source_header.jpg" width="1300" height="70" /> 
+            </div>
+            <div id="hMenu">
+
+            </div>
+        </div>
+        <div id="cBody"> 
+            <div style="margin-left: 340px; margin-top: 50px;">
+                <table border="0">
+                    <tr>
+                        <td colspan="5" style="font-weight: bold;">
+                            City Master
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Select Legal Entity</td>
+                        <td>
+                            <select style="width: 150px;">
+                                <option value="0" selected="selected">---Select---</option>
+                                <option value="IND">Legal Entity1</option>
+                                <option value="USA">Legal Entity2</option>
+                                <option value="UK">Legal Entity3</option>
+                                <option value="AUS">Legal Entity4</option>
+                            </select>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td</td>
+                        <td>
+
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Select State </td>
+                        <td>City Code </td>
+                        <td>City name </td>
+                        <td>  </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="select" style="width:150px">
+                                <option selected="selected">---Select---</option>
+                                <option>State Name1</option>
+                                <option>State Name2</option>
+                                <option>State Name3</option>
+                            </select> </td>
+                        <td><input type="text" name="dd"> </td>
+                        <td><input type="text" name="dd"></td>
+                        <td><input type="submit" value="ADD" /> </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>State Name<hr/></td>
+                        <td>City Code<hr/></td>
+                        <td>City Name<hr/></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>State Name1</td>
+                        <td>City-001</td>
+                        <td><input type="text" value="City Name1"/> </td>
+                        <td><input type="checkbox" name="hg"/> </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>State Name2</td>
+                        <td>City-002</td>
+                        <td><input type="text" value="City Name2"/> </td>
+                        <td><input type="checkbox" name="hg"/> </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>State Name3</td>
+                        <td>City-003</td>
+                        <td><input type="text" value="City Name3"/> </td>
+                        <td><input type="checkbox" name="hg"/> </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="float: right;"><input type="submit" value="Update" style="width: 100px;" /></td>
+                        <td><input type="submit" value="Delete" style="width: 100px;"/></td>
+                        <td> </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="color: blueviolet;margin-left: 340px;margin-top: 50px;">
+                <p>
+                    <b>Note:- </b>
+
+                </p>
+                <p>
+                    1:'Enterprise Setup'<br>
+                    2:'Enterprise Setup'
+
+                </p>
+            </div>
+    </body>
+</html>

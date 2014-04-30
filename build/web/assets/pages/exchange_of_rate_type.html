@@ -1,0 +1,146 @@
+<html>
+    <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+    <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="../js/jscript.js"></script>
+    <script type="text/javascript" src="../js/EventScript.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/validation.js"></script>
+    <style type="text/css">
+        #container{bockground-color:blue;
+                   /*height:100%;*/
+        }
+        #header{
+            height:10%;
+        }
+        #cBody{
+            height:470px;
+        }
+        #hMenu{
+            height:3%;
+        }
+
+        #hImg{
+            height:6%;
+        }
+        #footer{
+            background-color: #339;
+            height:5%;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $("#hMenu").load("Home.html");
+            $("#tableArea").hide();
+
+            $("#sub2").click(function() {
+                var noOfLevel = $("#nolevel").val();
+                //alert("---" + noOfLevel)
+                if (noOfLevel != '') {
+                    // $("#tableArea").empty();
+                    $("#tableArea").show();
+                    for (var i = 1; i <= noOfLevel; i++) {
+                        newRow = "<tr>" +
+                                "<td>Type" + '\t' + i + '\t' + "<input type='text' size='10'/></td>" +
+                                "<td><input type='text' size='10'/></td>" +
+                                "<td><input type='text' size='10'/></td>" +
+                                "<td align='center'><input class='checkbox1' type='checkbox'></td>";
+
+                        $("#addLevelsTable tr:last").after(newRow);
+                    }
+                }
+            });
+            $('#selectAll').click(function(event) {                 //on click 
+                alert("---" )
+                if (this.checked) { // check select status
+                    $('.checkbox1').each(function() { //loop through each checkbox
+                        this.checked = true;  //select all checkboxes with class "checkbox1"               
+                    });
+                } else {
+                    $('.checkbox1').each(function() { //loop through each checkbox
+                        this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+                    });
+                }
+            });
+
+        });
+    </script>
+
+</head>
+<body id="container">
+    <div id="header">
+        <div id="hImg">
+            <img src="../images/source_header.jpg" width="1300" height="70" /> 
+        </div>
+        <div id="hMenu">
+
+        </div>
+    </div>
+
+
+    <div id="cBody">
+        <div style="margin-left: 340px; margin-top: 80px;">
+            <form>
+                <table border="1">
+
+                    <tr>
+                        <td colspan="4" style="font-weight: bold; text-align: center;">
+                            Exchange Rate Type
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 20px;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Select Legal Entity :</td>
+                        <td colspan="3"><label>
+                                <select name="select" style="width:152px">
+                                    <option selected="selected">Legal Entity 1</option>
+                                    <option>Legal Entity 2</option>
+                                </select>
+                            </label>
+                            <input type="button" value="Go" id="sub"/>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td  colspan="2">
+                            Number of Types of Exchange Rate :
+                        </td>
+                        <td colspan="2">
+                            <input type="text" id="nolevel" size="21"/>  <input type="button" value="Go" id="sub2"/>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+            <div id="tableArea">
+                <form>
+                <table id="addLevelsTable">
+                    <tr>
+                        <td style="height: 20px;"></td>
+                    </tr>
+                    <tr>
+                        <td align="center">Exchange Rate Type<hr></td>
+                        <td align="center">Compliance<hr></td>
+                        <td align="center">Depreciation<hr></td>
+                        <td>Select All <input type="checkbox" name="checkbox4" value="checkbox" id="selectall"><hr></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td align="right"><input type="submit"  value="Back" style="width: 100px;"/></td>
+                        <td align="left"><input type="reset" value="Cancel" style="width: 100px;"/></td>
+                        <td align="left"><input type="reset" value="Update" style="width: 100px;"/></td>
+                        <td align="right"><input type="submit"  value="Delete" style="width: 100px;"/></td>
+                        <td align="right"><input type="submit"  value="Update" style="width: 100px;"/></td>
+                    </tr>
+                </table>
+                    </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

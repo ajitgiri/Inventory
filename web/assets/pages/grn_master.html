@@ -1,0 +1,270 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TAX Master</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+      <style type="text/css">
+        #container{bockground-color:blue;
+                   /*height:100%;*/
+        }
+        #header{
+            height:10%;
+        }
+        #cBody{
+            height:470px;
+        }
+        #hMenu{
+            height:3%;
+        }
+
+        #hImg{
+            height:6%;
+        }
+        #footer{
+            background-color: #339;
+            height:5%;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $("#hMenu").load("Home.html");
+			$("#unit_table").hide();
+        
+                $("#sel").change(function() {
+                    //  alert("Not-same");
+                    var value1 = $("#sel").val();
+                    var vl1 = "new";
+                    var vl2 = "employee1";
+                    if (value1 == vl1) {
+                        $("#unit_table").hide();
+                    }
+                    if (value1 == vl2) {
+                        $("#unit_table").show();
+                    }
+                });
+				});
+    </script>
+
+</head>
+<body id="container">
+    <div id="header">
+        <div id="hImg">
+            <img src="../images/source_header.jpg" width="1300" height="70" /> 
+        </div>
+        <div id="hMenu">
+
+        </div>
+    </div>
+
+
+    <div id="cBody">
+        <div style="margin-left: 340px; margin-top: 50px;">
+          <table width="500" border="0" cellspacing="2" cellpadding="0">
+            <tr>
+              <td colspan="2" align="center"><strong>GRN</strong><strong></strong></td>
+            <tr>
+              <td width="134">&nbsp;</td>
+              <td width="154">&nbsp;</td>
+              <td width="11">&nbsp;</td>
+              <td width="191">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center">Transaction Type   : </td>
+              <td><select name="select3" style="width:120px">
+                  <option selected="selected">Select</option>
+                  <option>OP</option>
+                  <option>LB</option>
+                  <option>FOC</option>
+                  <option>Invoice Based</option>
+                  <option>Delivery Note Based</option>
+              </select></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+          <table width="594" border="0" cellspacing="2" cellpadding="0">
+  <tr>
+    <td width="139" align="center"><strong>OP</strong></td>
+    <td width="120">&nbsp;</td>
+    <td width="100">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center">State : </td>
+    <td><select name="select7" style="width:120px">
+      <option selected="selected">--Select--</option>
+      <option>State 1</option>
+      <option>State 2</option>
+      <option>State 3</option>
+    </select></td>
+    <td align="center">City : </td>
+    <td width="225"><select name="select8" style="width:120px">
+      <option selected="selected">Select</option>
+      <option>City 1</option>
+      <option>City 2</option>
+      <option>City 3</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td align="center">Site :</td>
+    <td><select name="select9" style="width:120px">
+      <option selected="selected">Select</option>
+      <option>Site 1</option>
+      <option>Site 2</option>
+      <option>Site 3</option>
+    </select></td>
+		<td align="center">Bond Type :</td>
+        <td><select name="select10" style="width:120px" id="sel">
+          <option selected="selected">Select</option>
+          <option value="new">Non Bonded</option>
+          <option value="employee1">STP</option>
+          <option value="employee1">SEZ</option>
+        </select></td>
+  </tr>
+  </table>
+  <table width="550" id="unit_table">
+  <tr>
+    <td width="132" align="center">Unit No: </td>
+    <td width="120"><label>
+      <select name="select" style="width:120px">
+        <option selected="selected">Select</option>
+        <option>Unit-1</option>
+        <option>Unit-2</option>
+      </select>
+    </label></td>
+    <td width="103" align="center">Bond Register : </td>
+    <td width="175"><label>
+    <select name="select6" style="width:120px">
+      <option selected="selected">Select</option>
+      <option>Bond Register1</option>
+      <option>Bond Register2</option>
+      <option>Bond Register3</option>
+    </select>
+    </label></td>
+  </tr>
+  </table>
+  <table width="577">
+  <tr>
+    <td width="140" align="center">GRN No  : </td>
+    <td width="120"><input type="text" name="textfield3" style="width:120px"/></td>
+    <td width="93" align="center">GRN Date  : </td>
+    <td width="204"><input type="text" name="textfield32" style="width:120px" id="datepicker1"/></td>
+  </tr>
+  <tr>
+    <td align="center">Procurred Vendor </td>
+    <td><select name="select2" style="width:120px" id="select">
+      <option selected="selected">Select</option>
+      <option value="new1">Vendor1</option>
+      <option value="employee11">Vendor2</option>
+      <option value="employee11">Vendor3</option>
+    </select></td>
+	<td align="center">Currency : </td>
+    <td><select name="select13" style="width:120px">
+      <option selected="selected">Select</option>
+      <option>US Dollar</option>
+      <option>Euro</option>
+      <option>Rupee</option>
+    </select></td>
+  </tr>
+  <tr></tr>
+   <tr></tr>
+    <tr></tr>
+	 <tr></tr>
+	  <tr></tr>
+</table>
+<table width="1053" align="left">
+<tr>
+ <td width="72" style="font-weight: bold; background-color: activecaption;">Item Code</td>
+ <td width="117" style="font-weight: bold; background-color: activecaption;">Item Description</td>
+ <td width="125" style="font-weight: bold; background-color: activecaption;">Major Catagory</td>
+ <td width="117" style="font-weight: bold; background-color: activecaption;">Minor Catagory</td>
+ <td width="128" style="font-weight: bold; background-color: activecaption;">Order Quantity</td>
+ <td width="171" style="font-weight: bold; background-color: activecaption;">Order Receipt So Far</td>
+ <td width="125" style="font-weight: bold; background-color: activecaption;">Quantity Receipt</td>
+ <td width="45" style="font-weight: bold; background-color: activecaption;">Select</td>
+ <td width="113"></td>
+</tr>
+<tr>
+<td>item-001</td>
+<td>IT-Hardware</td>
+<td>Projector</td>
+<td>Laptop</td>
+<td>5</td>
+<td>3</td>
+<td><input type="text" name="=tname" value="2"></td>
+<td><label>
+                                    <input name="radiobutton" type="radio" value="radiobutton" />
+                                </label></td>
+</tr>
+<tr>
+<td>item-001</td>
+<td>IT-Hardware</td>
+<td>Projector</td>
+<td>Laptop</td>
+<td>4</td>
+<td>1</td>
+<td><input type="text" name="=tname" value="3"></td>
+<td><label>
+                                    <input name="radiobutton" type="radio" value="radiobutton" />
+                                </label></td>
+</tr>
+<tr>
+<td>item-001</td>
+<td>IT-Hardware</td>
+<td>Projector</td>
+<td>Laptop</td>
+<td>7</td>
+<td>3</td>
+<td><input type="text" name="=tname" value="4"></td>
+<td><label>
+                                    <input name="radiobutton" type="radio" value="radiobutton" />
+                                </label></td>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+
+</table>
+<table width="421">
+<tr>
+<!--<td width="240">&nbsp;</td>
+<td width="10">&nbsp;</td>
+<td width="17">&nbsp;</td>-->
+<td width="9">&nbsp;</td>
+<td width="122" align="center"><input name="submit4" type="submit" style="width: 120px;" value="Next"/></td></tr>
+</table>
+</div>
+        <div style="color: blueviolet;margin-left: 340px;margin-top: 50px;">
+            <p>
+                <b>Note:- </b>
+                
+            </p>
+            <p>
+            1.Click Next GRN2 page will open  <br />
+          </p>
+    </div>
+</body>
+</html>

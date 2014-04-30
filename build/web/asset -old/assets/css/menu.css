@@ -1,0 +1,110 @@
+/* 
+    Document   : menu
+    Created on : Apr 6, 2014, 7:06:59 PM
+    Author     : ram
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* reset */
+
+.menu,
+.menu ul,
+.menu li,
+.menu a{
+margin:0;
+padding:0;
+border:none;
+outline:none;
+}
+
+/* position */
+
+ul.menu{
+margin: 0px auto 0 auto;
+}
+
+.menu{
+width:100%;  /* come back to check */
+height:30px;
+background:blue;
+border-radius: 3px; /* To make corner rownded */ 
+-webkit-border-radius: 5px; 
+-moz-border-radius: 5px; 
+}
+
+.menu li{
+list-style:none;
+float:left;
+display :block;
+position : relative;
+
+
+}
+
+/* Links */
+
+.menu li a{
+display : block;
+text-decoration :none;
+font-weight : bold;
+color : #FFF;
+font-size : 14px;
+padding : 0 8px;
+margin : 5px 0;
+line-height : 13px;
+border-left : 1px solid #393942;
+border-right : 1px solid #393942;
+
+/* CSS3 Properties */
+transition: color .5s ease;
+-moz-transition: color .5s ease;
+-webkit-transition: color .5s ease;
+}
+.menu li:first-child a{ border-left : none;}
+.menu li:last-child a{ border-right : none;}
+.menu li:hover > a{ color : yellow;}
+
+/* Sub Menu */
+
+.menu ul{
+position :absolute;
+opacity : 0;
+background : blue ;
+border-radius: 3px; /* To make corner rownded */ 
+-webkit-border-radius: 5px; 
+-moz-border-radius: 5px; 
+
+/* CSS3 Properties */
+ background :Linear-gradient (top , red 0%, red 100%);
+ background :-moz-linear-gradient (top , red 0%, red 100%);
+ background :-webkit-linear-gradient (top , red 0%, red 100%);
+ 
+ transition : opacity .25s ease .1s;
+ -moz-transition : opacity .25s ease .1s;
+ -webkit-transition : opacity .25s ease .1s;
+}
+
+.menu li:hover  > ul {
+opacity : 1;
+}
+
+.menu ul li{
+height: 0;
+overflow: hidden;
+padding:0;
+}
+
+.menu li:hover >ul li{
+height: auto;
+overflow: visible;
+}
+.menu ul li a{
+width: 190px;
+margin : 0;
+padding : 5px 5px;
+border :none;
+border-bottom : 1px solid #353359;
+}
+
+.menu ul li:last-child a{ border : none ;}

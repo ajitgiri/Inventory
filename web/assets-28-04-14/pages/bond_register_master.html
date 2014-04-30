@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script></head>
+    <style type="text/css">
+        #container{bockground-color:blue;
+                   /*height:100%;*/
+        }
+        #header{
+            height:10%;
+        }
+        #cBody{
+            height:470px;
+        }
+        #hMenu{
+            height:3%;
+        }
+
+        #hImg{
+            height:6%;
+        }
+        #footer{
+            background-color: #339;
+            height:5%;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $("#hMenu").load("Home.html");
+        });
+    </script>
+</head>
+<body id="container">
+    <div id="header">
+        <div id="hImg">
+            <img src="../images/source_header.jpg" width="1300" height="70" /> 
+        </div>
+        <div id="hMenu">
+
+        </div>
+    </div>
+    <div id="cBody"> 
+        <div style="margin-left: 350px; margin-top: 70px;">
+
+            <table  border="0" cellspacing="2" cellpadding="0">
+                <tr>
+                    <td colspan="7" align="center"><strong>Bond Register</strong><strong> Master </strong></td>
+                </tr>
+                <tr>
+                    <td colspan="7" align="center" style="height: 20px;"></td>
+                </tr>
+                <tr>
+                    <td>Select Unit Type: </td>
+                    <td>Select Unit Name: </td>
+                    <td><label>Bond Register Code  : </label></td>
+                    <td>Bond Register No.  : </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><label></label></td>
+                </tr>
+                <tr>
+                    <td><select name="select3" style="width:100px">
+                            <option selected="selected">Select</option>
+                            <option>SE2</option>
+                            <option>STP</option>
+                            <option>NONBONDED</option>
+                        </select></td>
+                    <td><select name="select" style="width:100px">
+                            <option selected="selected">Select</option>
+                            <option>Unit Name 1</option>
+                            <option>Unit Name 2</option>
+                            <option>Unit Name 3</option>
+                        </select></td>
+                    <td><label>
+                            <input type="text" name="textfield" />
+                        </label></td>
+                    <td><input type="text" name="textfield2" /></td>
+                    <td><input type="submit" name="Submit" value="Add" /></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><label></label></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><u>Unit Type </u></td>
+                    <td><u>Unit Name </u></td>
+                    <td><u>Bond Register Code </u></td>
+                    <td><u>Bond Register No. </u></td>
+                    <td align="center"><u>Select All </u>
+                                <input type="checkbox" name="checkbox44" value="checkbox" id="selectall"/>
+                            </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>STP </td>
+                    <td>Unit Name 1 </td>
+                    <td>BR - 001 </td>
+                    <td><input type="text" name="textfield22" value="BR-No-001"/></td>
+                    <td align="center"><label>
+                            <input type="checkbox" name="checkbox4" value="checkbox" />
+                        </label></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>CTP </td>
+                    <td>Unit Name 2 </td>
+                    <td>BR - 002 </td>
+                    <td align="center"><input type="text" name="textfield22" value="BR-No-002"/></td>
+                    <td align="center"><input type="checkbox" name="checkbox42" value="checkbox" /></td>
+
+                </tr>
+                <tr>
+                    <td>SE2 </td>
+                    <td>Unit Name 3 </td>
+                    <td>BR - 003 </td>
+                    <td><input type="text" name="textfield22" value="BR-No-003"/></td>
+                    <td align="center"><input type="checkbox" name="checkbox43" value="checkbox" /></td>
+
+                </tr>
+
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                        <td width="100" align="right"><input name="submit" type="submit" style="width: 100px;"  value="Back"/></td>
+                        <td width="100" align="left"><input name="reset" type="reset" style="width: 100px;" value="Cancel"/></td>
+                        <td width="100" align="left"><input name="reset" type="reset" style="width: 100px;" value="Update"/></td>
+                        <td width="100" align="right"><input name="reset2" type="reset" style="width: 100px;" value="Delete"/></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+            </table>
+        </div>
+        <div style="color: blueviolet;margin-left: 340px;margin-top: 50px;">
+            <p>
+                <b>Note:- </b>
+
+            </p>
+            <p>
+                1. Select unit type from drop down (Example of unit type as SE2, STP, NONBONDED).</p>
+            <p>2. Can update the values using update button.</p>
+            <p>3. Can delete an entry using delete button.<br />
+            </p>
+        </div>
+</body>
+</html>

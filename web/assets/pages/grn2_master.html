@@ -1,0 +1,225 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TAX Master</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+		 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>  
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+
+      <style type="text/css">
+        #container{bockground-color:blue;
+                   /*height:100%;*/
+        }
+        #header{
+            height:10%;
+        }
+        #cBody{
+            height:470px;
+        }
+        #hMenu{
+            height:3%;
+        }
+
+        #hImg{
+            height:6%;
+        }
+        #footer{
+            background-color: #339;
+            height:5%;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $("#hMenu").load("Home.html");
+			$("#unit_table").hide();
+        
+                $("#sel").change(function() {
+                    //  alert("Not-same");
+                    var value1 = $("#sel").val();
+                    var vl1 = "new";
+                    var vl2 = "employee1";
+                    if (value1 == vl1) {
+                        $("#unit_table").hide();
+                    }
+                    if (value1 == vl2) {
+                        $("#unit_table").show();
+                    }
+                });
+				});
+    </script>
+<script type="text/javascript">
+            $(function() {
+                $("#datepicker1").datepicker({dateFormat: "dd-mm-yy"}).val();
+                $("#datepicker2").datepicker({dateFormat: "dd-mm-yy"}).val()
+            });
+        </script>
+</head>
+<body id="container">
+    <div id="header">
+        <div id="hImg">
+            <img src="../images/source_header.jpg" width="1300" height="70" /> 
+        </div>
+        <div id="hMenu">
+
+        </div>
+    </div>
+
+
+    <div id="cBody">
+        <div style="margin-left: 340px; margin-top: 50px;">
+          <table width="599" border="0" cellspacing="2" cellpadding="0">
+            <tr>
+              <td colspan="2" align="center"><strong>GRN2</strong><strong></strong></td>
+            <tr>
+              <td width="130">&nbsp;</td>
+              <td width="153">&nbsp;</td>
+              <td width="150">&nbsp;</td>
+              <td width="156">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center">Select BU : </td>
+              <td><select name="select4" style="width:120px">
+                <option selected="selected">Select</option>
+                <option>BU1</option>
+                <option>BU2</option>
+                <option>BU3</option>
+                <option>BU4</option>
+              </select></td>
+              <td>Select SBU :</td>
+			  <td><select name="select3" style="width:120px">
+                  <option selected="selected">Select</option>
+                  <option>SBU1</option>
+                  <option>SBU2</option>
+                  <option>SBU3</option>
+                  <option>SBU4</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td>Select Cost Center: &nbsp;</td>
+              <td><select name="select4" style="width:120px">
+                <option selected="selected">Select</option>
+                <option>CC Name1</option>
+                <option>CC Name2</option>
+                <option>CC Name3</option>
+                <option>CC Name4</option>
+              </select></td>
+              <td>Owner</td>
+              <td><select name="select3" style="width:120px">
+                  <option selected="selected">Select</option>
+                  <option>Org Wide Asset</option>
+                  <option>Org Level Specific</option>
+              </select></td>
+            </tr>
+			<tr>
+			<td>Service Vendor : </td>
+			<td><select name="select3" style="width:120px">
+                  <option selected="selected">Select</option>
+                  <option>Service Vendor1</option>
+                  <option>Service Vendor2</option>
+				   <option>Service Vendor3</option>
+				    <option>Service Vendor4</option>
+              </select></td>
+			<td>ERP Asset No.</td>
+			<td><input type="text" name="tname2" value="4"style="width:120px" ></td>
+			</tr>
+			<tr>
+			<td>Life in Month :</td>
+			<td><input type="text" name="tname" value="30" style="width:120px" /></td>
+			<td>Assembly Asset :</td>
+			<td><select name="select5" style="width:120px">
+              <option selected="selected">Select</option>
+              <option>Assembly Asset1</option>
+              <option>Assembly Asset2</option>
+              <option>Assembly Asset3</option>
+              <option>Assembly Asset4</option>
+            </select></td>
+			</tr>
+			<tr>
+			<td>Invoice No.</td>
+			<td><input type="text" name="textfield32" style="width:120px" value="101"/></td>
+			<td>Invoice Date : </td>
+			<td><input type="text" name="textfield322" style="width:120px" id="datepicker1"/></td>
+			</tr>
+			<tr>
+			<td>Delivery Note NO.</td>
+			<td><input type="text" name="textfield3" style="width:120px" value="2139"/></td>
+			<td> Delivery Note Date :</td>
+			<td><input type="text" name="textfield3" style="width:120px" id="datepicker2"/></td>
+			</tr>
+			<tr>
+			<td>Taggable :</td>
+			<td><select name="select5" style="width:120px">
+              <option selected="selected">Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select></td>
+			<td>Trackable</td>
+			<td><select name="select5" style="width:120px">
+              <option selected="selected">Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select></td>
+			</tr>
+			<tr>
+			<td>Associated Asset:</td>
+			<td><input type="text" name="textfield33" style="width:120px"/></td>
+			</tr>
+			<tr>
+			<td>Additional Charge1:</td>
+			<td><input type="text" name="textfield3" style="width:120px" value="3000"/></td>
+			<td>Additional Charge2:</td>
+			<td><input type="text" name="textfield3" style="width:120px" value="432"/></td>
+			</tr>
+			<tr>
+			<td>Asset Specification :</td>
+			<td><label>
+                        <textarea name="textarea" style="width:150px"></textarea>
+                        </label></td>
+			<td>Remark :</td>
+			<td><label>
+			  <textarea name="textarea2" style="width:150px"></textarea>
+			</label></td>
+			</tr>
+			<tr>
+			<td>Photograph :</td>
+			<td><input type="file" name="pic" id="pic" accept="image/bmp" size="13px"/>&nbsp;</td>
+			<td></td>
+			<td></td>
+			</tr>
+			<tr><td>&nbsp;</td></tr>
+          </table>
+		  
+		  <table width="371">
+		  <tr>
+		  <td width="23">&nbsp;</td>
+		  <td width="207">&nbsp;</td>
+		  <td width="21">&nbsp;</td>
+		  <td width="100"><input name="submit2" type="submit" style="width: 100px;"  value="Submit"/></td>
+		  </tr>
+		  </table>
+</div>
+        <div style="color: blueviolet;margin-left: 340px;margin-top: 50px;">
+            <p>
+                <b>Note:- </b>
+                
+            </p>
+            <p>
+            1.Click Next GRN2 page will open  <br />
+          </p>
+    </div>
+</body>
+</html>

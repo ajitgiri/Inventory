@@ -1,0 +1,135 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#fin1').hide();
+                $('#fin2').hide();
+            });
+        </script>
+        <title>Financial Year</title>
+    </head>
+ <body>
+        <div id="header">
+            <img src="../images/source_header.jpg" width="1300" height="70" /> 
+        </div>
+        <div id="adminHomeBody">
+            <ul class="menu">
+
+                <li><a href="Home.html" class="">Setup</a>
+                    <ul>
+                        <li><a href="enterprise_setup.html" class="history">Enterprise SetUp</a></li>
+                        <li><a href="organizational_hierarchy_page.html" class="present">Organizational Hierarchy</a></li>
+                        <li><a href="geographical_hierarchy.html" class="history">Geographical Hierarchy</a></li>
+                        <li><a href="warehouse_hierarchy.html" class="history">WareHouse Hierarchy</a></li>
+                        <li><a href="asset_setup_hierarchy.html" class="present">Asset Hierarchy</a></li>
+                        <li><a href="unit_type.html" class="present">Unit Type</a></li>
+                        <li><a href="currency_master.html" class="present">Currency Master</a></li>
+                        <li><a href="country_master.html" class="present">Country Master</a></li>
+                        <li><a href="exchange_of_rate_type.html" class="present">Exchange Rate Type</a></li>
+                        <li><a href="store_configuration.html" class="present">Store Configuration</a></li>
+                        <li><a href="allocation_type.html" class="present">Allocation Type</a></li>
+                        <li><a href="base_currency_configuration.html" class="present">Currency Configuration</a></li>
+                        <li><a href="comma_separated_configuration.html" class="present">Comma Separated Configuration</a></li>
+			<li><a href="decimal_configuration.html" class="present">Decimal Configuration</a></li>
+                        <li><a href="customer_configuration.html" class="present">Customer Configuration</a></li>
+                        <li><a href="entry_point.html" class="present">Entry Point</a></li>
+                        <li><a href="financial_year.html" class="present">Financial Year</a></li>
+                        <li><a href="vendor_configuration.html" class="present">Vendor Configuration</a></li>
+                        <li><a href="unit_type.html" class="present">Unique Code Config Mgmt</a></li>
+                        <li><a href="unit_type.html" class="present">Work Flow</a></li>
+                    </ul>
+                </li>
+                <li><a href="Home.html" class="">Master</a>
+                                        <ul>
+                        <li><a href="enterprise_master.html" class="history">Enterprise Master</a>  </li>
+                        <li><a href="legal_entity_master.html" class="present">Legal Entity Master</a></li>
+                        <li><a href="bu_master.html" class="present">BU Master</a></li>
+                        <li><a href="sbu_master.html" class="present">SBU Master</a></li>
+                        <li><a href="cost_center_master.html" class="present">Cost Master</a></li>
+                        <li><a href="state_master.html" class="present">State Master</a></li>
+                        <li><a href="city_master.html" class="present">City Master</a></li>
+                        <li><a href="site_master.html" class="present">Site Master</a></li>
+                        <li><a href="building_master.html" class="present">Building Master</a></li>
+                        <li><a href="floor_master.html" class="present">Floor Master</a></li>
+                        <li><a href="space_master.html" class="present">Space Master</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#" class="">Goods entry</a>
+                    <ul>
+                        <li><a href="editDistrict.html" class="history">District Reg</a></li>
+                        <li><a href="districtListView.html" class="present">District List</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" class="">Goods registration</a>
+                    <ul>
+                        <li><a href="#" class="app">Role Reg</a></li>
+                        <li><a href="#" class="website">Role List </a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="">Inventory management</a>
+                    <ul>
+                        <li><a href="#" class="history">History</a></li>
+                        <li><a href="#" class="present">Present</a></li>
+                        <li><a href="#" class="employee">Employee</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="">Material request</a></li>
+                <li><a href="#" class="">Tracking</a></li>
+                <li><a href="#" class="">Maintenance</a></li>
+                <li><a href="#" class="">Audit</a></li>
+                <li><a href="#" class="">Depreciation</a></li>
+                <li><a href="#" class="">Reports</a></li>
+            </ul>
+        </div> 
+    <br><br>
+
+    <div align="center">
+        Select Legal Entity : 
+        <select name="mydropdown">
+            <option value="legal_entity_1">Legal Entity 1</option>
+            <option value="legal_entity_2">Legal Entity 2</option>
+            <option value="legal_entity_3">Legal Entity 3</option>
+        </select>
+        <button type="button" id="go">GO</button>
+    </div>
+    <script>
+        $("#go").click(function() {
+            $("#fin1").show();
+
+        });
+    </script> 
+    <br><br><br>
+    <div id="fin1" align="center">
+        Number of Financial Year Applicable :
+        <input type="text" size="1"/>
+        <button type="button" id="show">Show</button>
+    </div>
+    <script>
+        $("#show").click(function() {
+
+            $("#fin2").show();
+        });
+    </script>
+    <div id="fin2" align="center">
+        <br>
+        1. Financial Year 1 :<input type="text" size="10"/><br>
+        2. Financial Year 2 :<input type="text" size="10"/><br>
+        3. Financial Year 3 :<input type="text" size="10"/><br>
+        <br><br><input type="submit" value="Update"/>
+    </div>
+</body>
+
+</html>

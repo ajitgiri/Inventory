@@ -1,0 +1,226 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Item Master</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <style type="text/css">
+            #container{bockground-color:blue;
+                       /*height:100%;*/
+            }
+            #header{
+                height:10%;
+            }
+            #cBody{
+                height:470px;
+            }
+            #hMenu{
+                height:3%;
+            }
+
+            #hImg{
+                height:6%;
+            }
+            #footer{
+                background-color: #339;
+                height:5%;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function() {
+                $("#hMenu").load("Home.html");
+
+            });
+        </script>
+
+    </head>
+    <body id="container">
+        <div id="header">
+            <div id="hImg">
+                <img src="../images/source_header.jpg" width="1300" height="70" /> 
+            </div>
+            <div id="hMenu">
+
+            </div>
+        </div>
+
+
+        <div id="cBody"> 
+            <div style="margin-left: 200px; margin-top: 70px;">
+                <div style="margin-left: 50px; margin-top: 50px;">
+
+
+                    <table  border="0" cellpadding="0" cellspacing="2">
+
+                        <tr>
+                            <td colspan="4" style="font-weight: bold;" align="center">Item Master</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="font-weight: bold;height: 20px;" align="center"></td>
+                        </tr>
+                        <tr>
+                            <td > Select Major Category : </td>
+                            <td>
+                                <select style="width: 180px;">
+                                    <option value="0" selected="selected">---Select---</option>
+                                    <option value="IND">Computer Equipments</option>
+                                    <option value="USA">Office Equipments</option>
+
+                                    <option value="UK">Furniture</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td > Select Minor Category : </td>
+                            <td>
+
+                                <select style="width: 180px;">
+                                    <option value="0" selected="selected">---Select---</option>
+                                    <option value="INDA">Asset Minor Category Name 1</option>
+                                    <option value="USA">Asset Minor Category Name 2</option>
+                                    <option value="UK">Asset Minor Category Name 3</option>
+                                    <option value="AUS">Asset Minor Category Name 4</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td > Select Sub Category : </td>
+                            <td>
+                                <select style="width: 180px;">
+                                    <option value="0" selected="selected">---Select---</option>
+
+                                    <option value="INDA">Asset Sub Cat. Name1</option>
+                                    <option value="USA">Asset Sub Cat. Name2</option>
+                                    <option value="UK">Asset Sub Cat. Name3</option>
+                                    <option value="AUS">Asset Sub Cat. Name4</option>
+                                </select>
+                            </td>
+                            <td style="width: 150px;"><input type="submit" value="Go" style="width: 50;"/> </td>
+
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="font-weight: bold;height: 10px;"></td>
+                        </tr>
+                        <tr>
+                            <td >Select Item Catalog: </td>
+                            <td>
+
+                                <select style="width: 180px;">
+                                    <option value="0" selected="selected">---Select---</option>
+                                    <option value="INDA">NEW</option>
+                                    <option value="INDA">PRD1-DESKTOP</option>
+                                    <option value="USA">PRD2-DESKTOP</option>
+                                    <option value="UK">PRD1-LAPTOP</option>
+
+                                    <option value="AUS">PRD2-LAPTOP</option>
+                                </select>
+                            </td>
+                            <td><input type="submit" value="Next" style="width: 100;"/> </td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Item Code:</td>
+
+                            <td><input type="text" value=""/> </td>
+                            <td style="width: 150;">Item Name:</td>
+                            <td><input type="text" value=""/></td>
+                        </tr>
+
+                        <tr>
+                            <td>Make :</td>
+                            <td><input type="text" value=""/> </td>
+
+                            <td>Model :</td>
+                            <td><input type="text" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td>Description :</td>
+                            <td><input type="text" value=""/> </td>
+                            <td>Manufacture Part No :</td>
+
+                            <td><input type="text" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td>Type of Goods :</td>
+                            <td>
+                                <select style="width: 180px;">
+                                    <option value="0" selected="selected">---Select---</option>
+                                    <option value="INDA">Accessory</option>
+
+                                    <option value="INDA">Consumable</option>
+                                    <option value="USA">Service</option>
+                                </select>
+                            </td>
+                            <td>UOM :</td>
+                            <td>
+                                <select style="width: 180px;">
+
+                                    <option value="0" selected="selected">---Select---</option>
+                                    <option value="INDA">UOM Name1</option>
+                                    <option value="INDA">UOM Name2</option>
+                                    <option value="USA">UOM Name3</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Track Individually :</td>
+                            <td>
+                                <input type="checkbox"/>
+                            </td>
+                            <td>Track in Quality</td>
+                            <td>
+                                <input type="checkbox"/>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" style="height:10px;"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Update" style="width: 100px;"/> </td>
+
+                            <td><input type="reset" value="Clear" style="width: 100px;"/></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" style="height:20px;"></td>
+                        </tr>
+
+                    </table>
+                </div>
+
+
+            </div>
+            <div style="color: blueviolet;margin-left: 340px;margin-top: 50px;">
+                <p>
+                    <b>Note:- </b>
+
+                </p>
+                <p>
+                    1:'Enterprise Setup'<br>
+
+                    2:'Enterprise Setup'
+
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

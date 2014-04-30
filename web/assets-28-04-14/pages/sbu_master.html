@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>BU Master</title>
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+     <style type="text/css">
+        #container{bockground-color:blue;
+                   /*height:100%;*/
+        }
+        #header{
+            height:10%;
+        }
+        #cBody{
+            height:470px;
+        }
+        #hMenu{
+            height:3%;
+        }
+
+        #hImg{
+            height:6%;
+        }
+        #footer{
+            background-color: #339;
+            height:5%;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $("#hMenu").load("Home.html");
+        });
+    </script>
+
+</head>
+<body id="container">
+    <div id="header">
+        <div id="hImg">
+            <img src="../images/source_header.jpg" width="1300" height="70" /> 
+        </div>
+        <div id="hMenu">
+
+        </div>
+    </div>
+
+
+    <div id="cBody">
+        <div style="margin-left: 340px; margin-top: 50px;">
+            <table  border="0" cellpadding="0" cellspacing="2">
+                <tr>
+                    <td colspan="6" style="font-weight: bold; text-align: center;">SBU Master</td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="font-weight: bold;height: 30px;"></td>
+                </tr>
+                <tr>
+                  
+                    <td colspan="0">Select Legal Entity :</td>
+                    <td colspan="3"><label>
+                            <select name="select" style="width:152px">
+                                <option selected="selected">Legal Entity 1</option>
+                                <option>Legal Entity 2</option>
+                            </select>
+                        </label></td>
+                </tr>
+                 <tr>
+                    <td colspan="6" style="font-weight: bold;"></td>
+                </tr>
+                
+                <tr>
+                  <td height="25">Select BU </td>
+                  <td><div align="left">SBU Code </div></td>
+                  <td>SBU Name </td>
+                  <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="25"><select name="select2" style="width:130px">
+                    <option>BU Name 1</option>
+                    <option>BU Name 2</option>
+                    <option>BU Name 3</option>
+                                    </select></td>
+                  <td><label>
+                    <input type="text" name="textfield" />
+                  </label></td>
+                  <td><input type="text" name="textfield2" /></td>
+                  <td><input type="submit" name="Submit" value="Add"/></td>
+                  <td><label></label></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="25">&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="25"><div align="left"><u>BU Name </u></div></td>
+                  <td><div align="left"><u>SBU Code</u> </div></td>
+                  <td><div align="left"><u>SBU Name</u></div></td>
+                  <td>Select All <input type="checkbox" name="checkbox4" value="checkbox" id="selectall"/><hr/></td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="25"><div align="left"><input type="tex" value=" BU Name 1"/></div></td>
+                  <td><div align="left">SBU - 001 </div></td>
+                  <td><div align="left"> <input type="tex" value=" SBU Name 1"/></div></td>
+                  <td align="center"><input type="checkbox" name="checkbox" value="checkbox" /></td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="25"><div align="left"><input type="tex" value=" BU Name 2"/></div></td>
+                  <td><div align="left">SBU - 002</div></td>
+                  <td><div align="left"><input type="tex" value=" SBU Name 2"/></div></td>
+                  <td align="center"><input type="checkbox" name="checkbox2" value="checkbox" /></td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="25"><div align="left"><input type="tex" value=" BU Name 3"/> </div></td>
+                  <td><div align="left">SBU - 003</div></td>
+                  <td><div align="left"><input type="tex" value=" SBU Name 3"/> </div></td>
+                  <td align="center"> <input type="checkbox" name="checkbox3" value="checkbox" /></td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="25">&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                   <td align="right"><input type="submit"  value="Back" style="width: 100px;"/></td>
+                        <td align="right"><input type="reset" value="Cancel" style="width: 100px;"/></td>
+                        <td align="left"><input type="reset" value="Update" style="width: 100px;"/></td>
+                        <td align="right"><input type="submit"  value="Delete" style="width: 100px;"/></td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="25">&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+        <div style="color: blueviolet;margin-left: 340px;margin-top: 50px;">
+            <p>
+                <b>Note:- </b>
+
+            </p>
+            <p>
+            1. Legal Entity based on - if multiple legal entity = yes.</p>
+            <p>2. Select BU from the BU list (as entered in the bu_master page). </p>
+            <p>3. Can edit the values entered, by checking the checkbox and clicking on update.</p>
+            <p>4.  Can also delete a data, by clicking on Delete button. </p>
+            <p> <br>
+              
+              
+            </p>
+        </div>
+    </body>
+</html>

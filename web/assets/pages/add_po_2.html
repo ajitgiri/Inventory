@@ -1,0 +1,157 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>TAX Master</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../css/formValidationStyle.css" type="text/css"/>-->
+        <script type="text/javascript" src="../js/lib/jquery-1.4.2.min.js"></script>
+
+        <script type="text/javascript" src="../js/lib/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jscript.js"></script>
+        <script type="text/javascript" src="../js/EventScript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <style type="text/css">
+            #container{bockground-color:blue;
+                       /*height:100%;*/
+            }
+            #header{
+                height:10%;
+            }
+            #cBody{
+                height:470px;
+            }
+            #hMenu{
+                height:3%;
+            }
+
+            #hImg{
+                height:6%;
+            }
+            #footer{
+                background-color: #339;
+                height:5%;
+            }
+        </style>
+		
+		 <script>
+            $(document).ready(function() {
+				$('#table_id1').hide();
+				$('#table_id2').hide();
+       });
+        </script>
+        <script type="text/javascript">
+            $(function() {
+                $("#hMenu").load("Home.html");
+				
+			$("#add_id1").click(function()
+                {
+                    $("#table_id2").show();
+                });
+            });
+        </script>
+		
+		<script type="text/javascript">
+            $(function() {
+                    $("#sel").change(function() {
+                    var value1 = $("#sel").val();
+                    var vl1 = "Asset";
+                    var vl2 = "Accessory";
+                    if (value1 == vl1) {
+                        
+                        $("#table_id1").show();
+                    }
+                    if (value1 == vl2) {
+                        
+                        $("#table_id1").show();
+                    }
+                });
+            });
+        </script>
+
+</head>
+<body id="container">
+        <div id="header">
+            <div id="hImg">
+                <img src="../images/source_header.jpg" width="1300" height="70" /> 
+            </div>
+            <div id="hMenu">
+
+            </div>
+        </div>
+
+
+        <div id="cBody">
+            <div style="margin-left: 340px; margin-top: 50px;">
+                
+				<table width="862" border="0">
+				  <tr>
+				    <td width="161" height="70" >&nbsp;</td>
+				    <td width="225"><div align="right"><strong>Enter Item  Details </strong></div></td>
+				    <td width="150" >&nbsp;</td>
+				    <td width="323">&nbsp;</td>
+			      </tr></table>
+				  <table id="table_id1">
+                  <tr>
+                    <td>Item Code : </td>
+                    <td><label>
+                      <input type="text" name="textfield">
+                    </label></td>
+                    <td>Item Name : </td>
+                    <td><input type="text" name="textfield2"></td>
+                  </tr>
+                  <tr>
+                    <td>Make :</td>
+                    <td><input type="text" name="textfield4"></td>
+                    <td>Model : </td>
+                    <td><input type="text" name="textfield3"></td>
+                  </tr>
+                  <tr>
+                    <td>Description :</td>
+                    <td><input type="text" name="textfield42"></td>
+                    <td>Manufacture Part No</td>
+                    <td><input type="text" name="textfield43"></td>
+                  </tr>
+                  <tr>
+                    <td>Type of Goods :</td>
+                    <td><select style="width: 150px;">
+                        <option value="0" selected="selected">---Select---</option>
+                        <option value="INDA">Accessory</option>
+                        <option value="INDA">Consumable</option>
+                        <option value="USA">Service</option>
+                      </select>
+                    </td>
+                    <td>UOM : </td>
+                    <td><input type="text" name="textfield45"></td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </table>
+				  <table>
+				
+				</table>
+                  <table  border="0" cellpadding="0" cellspacing="3">
+                    <tr >
+                        <td width="150" align="right">&nbsp;</td>
+                      <td width="110" align="center">&nbsp;</td>
+                      <td width="144" align="center"><input name="reset2" type="reset" style="width: 100px;" value="Add"/></td>
+                        <td width="6" align="left">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" style="height:20px;"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+</body>
+</html>
